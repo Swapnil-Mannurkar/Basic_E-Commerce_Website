@@ -37,7 +37,7 @@
 
 .NavbarProfile {
   align-self: center;
-  text-align: center;
+  text-align: left;
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1200px) {
