@@ -1,0 +1,88 @@
+.cardMainContainer {
+  width: 82%;
+  border-radius: 8px;
+  background-color: #e0e0e0;
+  margin: auto;
+  box-shadow: 2px 2px 5px 2px #666666;
+}
+
+.cardContainer {
+  padding: 20px;
+}
+
+.cardImage {
+  border: 2px solid black;
+  width: 280px;
+  height: 280px;
+}
+
+.cardTitle {
+  margin-top: 10px;
+  color: #444444;
+}
+
+.cardDetailContainer {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.cardPrice {
+  font-size: 1.2rem;
+  color: #000;
+  font-weight: bold;
+}
+
+.mrp {
+  font-size: 0.8rem;
+  padding-left: 5px;
+  color: red;
+}
+
+.mrpPrice {
+  text-decoration: line-through;
+}
+
+.addToCartButton {
+  color: rgba(0, 0, 128, 0.76) !important;
+  border-color: rgba(0, 0, 128, 0.76) !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+}
+
+.addToCartButton:hover {
+  color: white !important;
+  border-color: white !important;
+  background-color: rgba(0, 0, 128, 0.76) !important;
+}
+
+@media screen and (max-width: 768px) {
+  .cardMainContainer {
+    width: 95%;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .cardMainContainer {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  .cardMainContainer {
+    width: 90%;
+  }
+
+  .cardContainer {
+    padding: 20px 15px;
+  }
+
+  .cardImage {
+    border: 2px solid black;
+    width: 240px;
+    height: 240px;
+  }
+}

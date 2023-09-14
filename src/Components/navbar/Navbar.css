@@ -1,0 +1,47 @@
+.navbarContainer {
+  background-color: #000000;
+  color: white;
+  padding: 10px;
+  font-family: "Lato", sans-serif;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  font-weight: bold;
+  display: grid;
+}
+
+.navbarItem {
+  padding: 20px;
+}
+
+.NavbarLogo,
+.NavbarLocation,
+.NavbarCart {
+  align-self: center;
+  text-align: center;
+}
+
+.NavbarSearch {
+  align-self: center;
+}
+
+.NavbarReturnsOrders {
+  align-self: center;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.NavbarReturnsOrders div {
+  padding-left: 30px;
+}
+
+.NavbarProfile {
+  align-self: center;
+  text-align: center;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  .NavbarReturnsOrders div {
+    padding-left: 10px;
+  }
+}

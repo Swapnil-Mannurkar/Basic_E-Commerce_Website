@@ -1,0 +1,53 @@
+.cartControl {
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 18%;
+  right: 5%;
+  font-size: 2rem !important;
+  cursor: pointer;
+}
+
+.cartTitle {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.cartTitle::after {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 2px;
+  background-color: #222222;
+  position: relative;
+  left: 5%;
+  margin-top: 10px;
+}
+
+.cartItemsHeader {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  text-align: center;
+  gap: 19rem;
+  padding-bottom: 15px;
+}
+
+@media screen and (max-width: 480px) {
+  .cartTitle {
+    font-size: 1.4rem;
+  }
+
+  .cartItemsHeader {
+    gap: 8rem;
+    padding-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  .cartItemsHeader {
+    gap: 13rem;
+  }
+}

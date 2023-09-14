@@ -1,0 +1,34 @@
+.navbarCart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding-left: 15px;
+  cursor: pointer;
+}
+
+.itemNumberInCart {
+  position: absolute;
+  top: 15px;
+  background-color: red;
+  border-radius: 50%;
+  padding: 4px;
+  font-size: 12px;
+  width: 25px;
+}
+
+@media screen and (max-width: 480px) {
+  .navbarCart {
+    padding-left: 10px;
+  }
+
+  .itemNumberInCart {
+    width: 20px;
+    height: 20px;
+    padding: 2.5px;
+  }
+}
+
+/* @media screen and (max-width: ) {
+  
+} */

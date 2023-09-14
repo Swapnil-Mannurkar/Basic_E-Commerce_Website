@@ -1,0 +1,19 @@
+.productLink {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.productLink ul {
+  display: flex;
+  flex-direction: column;
+  height: 17vh;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 768px) {
+  .productLink {
+    height: 100%;
+    align-items: center;
+  }
+}

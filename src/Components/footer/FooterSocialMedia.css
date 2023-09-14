@@ -1,0 +1,40 @@
+.socialMediaContainer {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.socialMediaIconContainer {
+  background-color: white;
+  padding: 4px;
+  border-radius: 25px;
+  display: flex;
+}
+
+.SocailMediaIcon {
+  color: black;
+}
+
+@media screen and (max-width: 850px) {
+  .socialMediaContainer {
+    display: grid;
+    row-gap: 0.5rem;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 850px) {
+  .socialMediaContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 0;
+    height: 100%;
+    padding: 0px 40px;
+  }
+
+  .socialMediaIcon {
+    width: fit-content !important;
+  }
+}

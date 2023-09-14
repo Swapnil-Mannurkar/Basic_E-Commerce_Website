@@ -1,0 +1,44 @@
+[
+  {
+    "id": "shank1",
+    "img": "https://m.media-amazon.com/images/I/6169YhgeEXL._UX679_.jpg",
+    "title": "Shank's T-Shirt",
+    "price": "400",
+    "mrp": "600"
+  },
+  {
+    "id": "zoro1",
+    "img": "https://m.media-amazon.com/images/I/61WP8jCNIML._AC_UL600_FMwebp_QL65_.jpg",
+    "title": "Zoro's T-Shirt",
+    "price": "500",
+    "mrp": "750"
+  },
+  {
+    "id": "luffy1",
+    "img": "https://m.media-amazon.com/images/I/71uMRQW1tJL._UX466_.jpg",
+    "title": "Luffy's T-Shirt",
+    "price": "300",
+    "mrp": "750"
+  },
+  {
+    "id": "whiteBeard1",
+    "img": "https://m.media-amazon.com/images/I/71tj6G3uxQL._AC_UL600_FMwebp_QL65_.jpg",
+    "title": "White Beard T-Shirt",
+    "price": "400",
+    "mrp": "600"
+  },
+  {
+    "id": "luffy2",
+    "img": "https://m.media-amazon.com/images/I/71LcWZ6r-oL._UX569_.jpg",
+    "title": "Luffy's T-Shirt",
+    "price": "500",
+    "mrp": "750"
+  },
+  {
+    "id": "zoro2",
+    "img": "https://m.media-amazon.com/images/I/71C6tGHwswL._AC_UL600_FMwebp_QL65_.jpg",
+    "title": "Zoro's T-Shirt",
+    "price": "400",
+    "mrp": "750"
+  }
+]
