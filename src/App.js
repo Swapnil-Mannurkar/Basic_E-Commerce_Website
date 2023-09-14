@@ -11,7 +11,6 @@ function App() {
 
   return (
     <div className={isCartOpen ? "disableScroll" : undefined}>
-      <h1> Testing........</h1>
       {isCartOpen && <Cart />}
       <Navbar />
       <HeroSection />
