@@ -1,0 +1,52 @@
+.shippingForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 120px;
+}
+
+.shippingForm label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.shippingForm input {
+  height: 4vh;
+  border-color: #00000088;
+  border-radius: 8px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contactDetails label {
+  margin-top: 20px;
+}
+
+.paymentDetails {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.paymentDetailsColumn {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.paymentDetailsRow {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}

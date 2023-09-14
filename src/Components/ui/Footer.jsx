@@ -12,6 +12,12 @@ const CartFooter = (props) => {
     if (props.type === "cart") dispatch(cartDataActions.toggleIsCartOpen());
   };
 
+  const submitHandler = () => {
+    if (props.type === "submitForm") {
+      window.location.reload();
+    }
+  };
+
   return (
     <>
       <hr
@@ -33,8 +39,12 @@ const CartFooter = (props) => {
         >
           Cancel
         </Button>
-        <Button variant="contained" className="cartSubmitButton orderButton">
-          Order
+        <Button
+          variant="contained"
+          className="cartSubmitButton orderButton"
+          onClick={submitHandler}
+        >
+          {props.submit}
         </Button>
       </div>
     </>

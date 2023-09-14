@@ -44,7 +44,7 @@ const Cart = () => {
             </p>
           </div>
         )}
-        {cartItems.length > 0 && <CartFooter type="cart"/>}
+        {cartItems.length > 0 && <CartFooter type="cart" submit={"ORDER"}/>}
       </div>
     </>
   );
