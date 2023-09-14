@@ -2,14 +2,14 @@ import React from "react";
 import { Button } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { cartDataActions } from "../../store/cartData";
-import "./CartFooter.css"
+import "./Footer.css";
 
-const CartFooter = () => {
+const CartFooter = (props) => {
   const dispatch = useDispatch();
   const totalAmount = useSelector((state) => state.cartData.totalAmount);
 
   const cartToggleHandler = () => {
-    dispatch(cartDataActions.toggleIsCartOpen());
+    if (props.type === "cart") dispatch(cartDataActions.toggleIsCartOpen());
   };
 
   return (

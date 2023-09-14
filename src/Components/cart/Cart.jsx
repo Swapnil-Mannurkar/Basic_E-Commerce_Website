@@ -1,7 +1,7 @@
 import "./Cart.css";
 import CartItemCard from "./CartItemCard";
-import CartHeader from "./CartHeader";
-import CartFooter from "./CartFooter";
+import CartHeader from "../ui/Header";
+import CartFooter from "../ui/Footer";
 import ProductionQuantityLimitsIcon from "@mui/icons-material/ProductionQuantityLimits";
 import { useDispatch, useSelector } from "react-redux";
 import { cartDataActions } from "../../store/cartData";
@@ -18,7 +18,7 @@ const Cart = () => {
     <>
       <div className="cartModal" onClick={cartToggleHandler}></div>
       <div className="cartContainer">
-        <CartHeader />
+        <CartHeader title={"Shopping Cart"} type="cart" />
         <div className="cartItemsContainer">
           {cartItems.map((item, index) => (
             <CartItemCard
@@ -44,7 +44,7 @@ const Cart = () => {
             </p>
           </div>
         )}
-        {cartItems.length > 0 && <CartFooter />}
+        {cartItems.length > 0 && <CartFooter type="cart"/>}
       </div>
     </>
   );

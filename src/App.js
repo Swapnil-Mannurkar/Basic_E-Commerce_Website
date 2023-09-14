@@ -5,6 +5,7 @@ import HeroSection from "./Components/heroSection/HeroSection";
 import Navbar from "./Components/navbar/Navbar";
 import Products from "./Components/products/Products";
 import { useSelector } from "react-redux";
+import SubmitForm from "./Components/submitForm/SubmitForm";
 
 function App() {
   const isCartOpen = useSelector((state) => state.cartData.isCartOpen);
@@ -12,6 +13,7 @@ function App() {
   return (
     <div className={isCartOpen ? "disableScroll" : undefined}>
       {isCartOpen && <Cart />}
+      <SubmitForm />
       <Navbar />
       <HeroSection />
       <Products />

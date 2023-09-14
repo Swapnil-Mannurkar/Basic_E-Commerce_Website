@@ -2,20 +2,20 @@ import React from "react";
 import CancelIcon from "@mui/icons-material/Cancel";
 import { useDispatch, useSelector } from "react-redux";
 import { cartDataActions } from "../../store/cartData";
-import "./CartHeader.css";
+import "./Header.css";
 
-const CartHeader = () => {
+const CartHeader = (props) => {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cartData.cartData);
 
   const cartToggleHandler = () => {
-    dispatch(cartDataActions.toggleIsCartOpen());
+    if (props.type === "cart") dispatch(cartDataActions.toggleIsCartOpen());
   };
 
   return (
     <>
       <div className="cartControl">
-        <h1 className="cartTitle">Shopping Cart</h1>
+        <h1 className="cartTitle">{props.title}</h1>
         <CancelIcon className="closeButton" onClick={cartToggleHandler} />
       </div>
       {cartItems.length > 0 && (
