@@ -10,9 +10,19 @@ const CartFooter = (props) => {
 
   const cartToggleHandler = () => {
     if (props.type === "cart") dispatch(cartDataActions.toggleIsCartOpen());
+    if (props.type === "submitForm") {
+      dispatch(cartDataActions.toggleIsSubmitFormOpen());
+      dispatch(cartDataActions.toggleIsCartOpen());
+    }
   };
 
   const submitHandler = () => {
+    if (props.type === "cart") {
+      console.log("inside submit handler");
+      dispatch(cartDataActions.toggleIsSubmitFormOpen());
+      dispatch(cartDataActions.toggleIsCartOpen());
+    }
+
     if (props.type === "submitForm") {
       window.location.reload();
     }
@@ -37,12 +47,13 @@ const CartFooter = (props) => {
           className="cartSubmitButton cancelButton"
           onClick={cartToggleHandler}
         >
-          Cancel
+          {props.cancel}
         </Button>
         <Button
           variant="contained"
           className="cartSubmitButton orderButton"
           onClick={submitHandler}
+          type="submit"
         >
           {props.submit}
         </Button>

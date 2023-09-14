@@ -9,11 +9,19 @@ import SubmitForm from "./Components/submitForm/SubmitForm";
 
 function App() {
   const isCartOpen = useSelector((state) => state.cartData.isCartOpen);
+  const isSubmitFormOpen = useSelector(
+    (state) => state.cartData.isSubmitFormOpen
+  );
+
+  console.log("Cart", isCartOpen);
+  console.log("Form", isSubmitFormOpen);
 
   return (
-    <div className={isCartOpen ? "disableScroll" : undefined}>
+    <div
+      className={isCartOpen || isSubmitFormOpen ? "disableScroll" : undefined}
+    >
       {isCartOpen && <Cart />}
-      <SubmitForm />
+      {isSubmitFormOpen && <SubmitForm />}
       <Navbar />
       <HeroSection />
       <Products />

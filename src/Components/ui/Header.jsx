@@ -7,9 +7,13 @@ import "./Header.css";
 const CartHeader = (props) => {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cartData.cartData);
+  const isSubmitFormOpen = useSelector(
+    (state) => state.cartData.isSubmitFormOpen
+  );
 
   const cartToggleHandler = () => {
-    if (props.type === "cart") dispatch(cartDataActions.toggleIsCartOpen());
+    dispatch(cartDataActions.toggleIsCartOpen("false"));
+    dispatch(cartDataActions.toggleIsSubmitFormOpen("false"));
   };
 
   return (
@@ -18,7 +22,7 @@ const CartHeader = (props) => {
         <h1 className="cartTitle">{props.title}</h1>
         <CancelIcon className="closeButton" onClick={cartToggleHandler} />
       </div>
-      {cartItems.length > 0 && (
+      {cartItems.length > 0 && !isSubmitFormOpen && (
         <div className="cartItemsHeader">
           <h4>Products</h4>
           <h4>Price</h4>

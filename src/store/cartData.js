@@ -5,15 +5,29 @@ const initialStateData = {
   cartItemCount: 0,
   totalAmount: 0,
   isCartOpen: false,
+  isSubmitFormOpen: false,
 };
 
 const cartDataSlice = createSlice({
   name: "cart-data",
   initialState: initialStateData,
   reducers: {
-    toggleIsCartOpen(state) {
+    toggleIsCartOpen(state, actions) {
+      if (actions.payload) {
+        state.isCartOpen = false;
+        return;
+      }
       state.isCartOpen = !state.isCartOpen;
     },
+
+    toggleIsSubmitFormOpen(state, actions) {
+      if (actions.payload) {
+        state.isSubmitFormOpen = false;
+        return;
+      }
+      state.isSubmitFormOpen = !state.isSubmitFormOpen;
+    },
+
     addItem(state, actions) {
       const newItem = actions.payload;
       const existingItem = state.cartData.find(
@@ -34,6 +48,7 @@ const cartDataSlice = createSlice({
         state.totalAmount += Number(newItem.price);
       }
     },
+
     decreaseItem(state, actions) {
       const removeItem = actions.payload;
       const existingItem = state.cartData.find(
@@ -43,6 +58,7 @@ const cartDataSlice = createSlice({
       existingItem.quantity--;
       state.totalAmount -= Number(removeItem.price);
     },
+
     removeItem(state, actions) {
       const removeItem = actions.payload;
       const itemPrice = Number(removeItem.price) * Number(removeItem.quantity);
