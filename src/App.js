@@ -13,9 +13,6 @@ function App() {
     (state) => state.cartData.isSubmitFormOpen
   );
 
-  console.log("Cart", isCartOpen);
-  console.log("Form", isSubmitFormOpen);
-
   return (
     <div
       className={isCartOpen || isSubmitFormOpen ? "disableScroll" : undefined}

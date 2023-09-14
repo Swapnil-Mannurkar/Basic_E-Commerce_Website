@@ -18,7 +18,6 @@ const CartFooter = (props) => {
 
   const submitHandler = () => {
     if (props.type === "cart") {
-      console.log("inside submit handler");
       dispatch(cartDataActions.toggleIsSubmitFormOpen());
       dispatch(cartDataActions.toggleIsCartOpen());
     }
