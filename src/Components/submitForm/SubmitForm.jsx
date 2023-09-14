@@ -2,11 +2,20 @@ import React from "react";
 import CartHeader from "../ui/Header";
 import CartFooter from "../ui/Footer";
 import "./SubmitForm.css";
+import { cartDataActions } from "../../store/cartData";
+import { useDispatch } from "react-redux";
 
 const SubmitForm = () => {
+  const dispatch = useDispatch();
+
+  const cartToggleHandler = () => {
+    dispatch(cartDataActions.toggleIsCartOpen("false"));
+    dispatch(cartDataActions.toggleIsSubmitFormOpen("false"));
+  };
+
   return (
     <div>
-      <div className="cartModal" /*onClick={cartToggleHandler}*/></div>
+      <div className="cartModal" onClick={cartToggleHandler}></div>
       <div className="cartContainer">
         <CartHeader title={"Shipping Details"} />
         <form className="shippingForm">

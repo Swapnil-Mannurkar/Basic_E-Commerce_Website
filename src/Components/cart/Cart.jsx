@@ -11,7 +11,8 @@ const Cart = () => {
   const cartItems = useSelector((state) => state.cartData.cartData);
 
   const cartToggleHandler = () => {
-    dispatch(cartDataActions.toggleIsCartOpen());
+    dispatch(cartDataActions.toggleIsCartOpen("false"));
+    dispatch(cartDataActions.toggleIsSubmitFormOpen("false"));
   };
 
   return (
