@@ -55,6 +55,13 @@ const cartDataSlice = createSlice({
         (item) => item.id === removeItem.id
       );
       state.cartItemCount--;
+
+      console.log(removeItem.quantity);
+      if (removeItem.quantity === 1) {
+        state.cartData = state.cartData.filter(
+          (item) => item.id !== removeItem.id
+        );
+      }
       existingItem.quantity--;
       state.totalAmount -= Number(removeItem.price);
     },
