@@ -43,6 +43,7 @@
 
 @media screen and (max-width: 400px) {
   .productTitleMainContainer {
+    width: 100% !important;
     text-align: center;
   }
   
