@@ -42,6 +42,15 @@
 }
 
 @media screen and (max-width: 400px) {
+  .productTitleMainContainer {
+    text-align: center;
+  }
+  
+  .productTitleContainer {
+    flex-direction: column !important;
+    align-items: center;
+  }
+
   .productsCardContainer {
     grid-template-columns: 100%;
     width: 90%;
