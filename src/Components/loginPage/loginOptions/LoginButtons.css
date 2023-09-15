@@ -1,0 +1,14 @@
+.loginButtonsContainer {
+  margin-top: 1.62rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 960px) {
+  .loginButtonsContainer {
+    gap: 1rem;
+  }
+}

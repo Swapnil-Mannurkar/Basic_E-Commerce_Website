@@ -1,6 +1,6 @@
 import React from "react";
 import "./Modal.css";
-import { cartDataActions } from "../../store/cartData";
+import { cartDataActions } from "../../assests/store/cartData";
 import { useDispatch } from "react-redux";
 
 const Modal = (props) => {

@@ -1,30 +1,10 @@
 import "./App.css";
-import Cart from "./Components/cart/Cart";
-import Footer from "./Components/footer/Footer";
-import HeroSection from "./Components/heroSection/HeroSection";
-import Navbar from "./Components/navbar/Navbar";
-import Products from "./Components/products/Products";
-import { useSelector } from "react-redux";
-import SubmitForm from "./Components/submitForm/SubmitForm";
+import Home from "./Components/home/Home";
 
 function App() {
-  const isCartOpen = useSelector((state) => state.cartData.isCartOpen);
-  const isSubmitFormOpen = useSelector(
-    (state) => state.cartData.isSubmitFormOpen
-  );
 
-  return (
-    <div
-      className={isCartOpen || isSubmitFormOpen ? "disableScroll" : undefined}
-    >
-      {isCartOpen && <Cart />}
-      {isSubmitFormOpen && <SubmitForm />}
-      <Navbar />
-      <HeroSection />
-      <Products />
-      <Footer />
-    </div>
-  );
+
+  return <Home />;
 }
 
 export default App;

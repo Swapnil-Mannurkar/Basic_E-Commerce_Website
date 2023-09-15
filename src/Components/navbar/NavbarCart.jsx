@@ -1,7 +1,7 @@
 import { ShoppingCart } from "@mui/icons-material";
 import "./NavbarCart.css";
 import { useDispatch, useSelector } from "react-redux";
-import { cartDataActions } from "../../store/cartData";
+import { cartDataActions } from "../../assests/store/cartData";
 
 const NavbarCart = () => {
   const dispatch = useDispatch();

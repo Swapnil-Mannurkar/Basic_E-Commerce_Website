@@ -1,0 +1,83 @@
+.height100 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.LoginOptionsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80%;
+  justify-self: center;
+  animation: fadeInAnimationForm ease 2s;
+}
+
+@keyframes fadeInAnimationForm {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.signInTitle {
+  font-family: Montserrat;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.signInDescription {
+  color: #000;
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.registerLink {
+  margin-top: 20px;
+  text-align: center;
+  font-family: Lato;
+  color: #858585;
+}
+
+@media screen and (min-width: 651px) and (max-width: 960px) {
+  .LoginOptionsContainer {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .signInTitle {
+    font-size: 24px;
+  }
+
+  .signInDescription {
+    font-size: 14px;
+  }
+
+  .registerLink {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .LoginOptionsContainer {
+    height: 65%;
+  }
+}
+
+@media screen and (min-width: 961px) and (max-width: 1200px) {
+  .LoginOptionsContainer {
+    height: 90%;
+  }
+}

@@ -2,10 +2,12 @@ import { Link } from "@mui/material";
 import "./NavbarProfile.css";
 
 const NavbarProfile = () => {
+  const profileImg = localStorage.getItem("picture");
   return (
     <Link>
-      <img className="profilePicture"
-        src="https://swapnil-mannurkar.github.io/static/media/Swapnil.b5363dea74c9c625b4b7.png"
+      <img
+        className="profilePicture"
+        src={profileImg}
         width="35px"
         alt="profile"
       />

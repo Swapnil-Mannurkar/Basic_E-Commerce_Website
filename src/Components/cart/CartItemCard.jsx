@@ -3,7 +3,7 @@ import "./CartItemCard.css";
 import { Button } from "@mui/material";
 import { Delete } from "@mui/icons-material";
 import { useDispatch } from "react-redux";
-import { cartDataActions } from "../../store/cartData";
+import { cartDataActions } from "../../assests/store/cartData";
 
 const CartItemCard = (props) => {
   const dispatch = useDispatch();

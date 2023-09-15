@@ -2,7 +2,7 @@ import "./ProductCard.css";
 import { Button } from "@mui/material";
 import { ShoppingCartRounded } from "@mui/icons-material";
 import { useDispatch } from "react-redux";
-import { cartDataActions } from "../../store/cartData";
+import { cartDataActions } from "../../assests/store/cartData";
 
 const ProductCard = (props) => {
   const dispatch = useDispatch();

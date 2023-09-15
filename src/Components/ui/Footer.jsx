@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
-import { cartDataActions } from "../../store/cartData";
+import { cartDataActions } from "../../assests/store/cartData";
 import "./Footer.css";
 
 const CartFooter = (props) => {

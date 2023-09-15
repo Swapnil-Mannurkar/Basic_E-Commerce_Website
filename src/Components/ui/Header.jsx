@@ -1,7 +1,7 @@
 import React from "react";
 import CancelIcon from "@mui/icons-material/Cancel";
 import { useDispatch, useSelector } from "react-redux";
-import { cartDataActions } from "../../store/cartData";
+import { cartDataActions } from "../../assests/store/cartData";
 import "./Header.css";
 
 const CartHeader = (props) => {
