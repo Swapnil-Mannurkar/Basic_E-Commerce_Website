@@ -6,6 +6,7 @@ import { cartDataActions } from "../../assests/store/cartData";
 
 const ProductCard = (props) => {
   const dispatch = useDispatch();
+  const mobileScreen = window.innerWidth < 480;
 
   const addItemHandler = () => {
     const item = {
@@ -31,7 +32,7 @@ const ProductCard = (props) => {
           </p>
           <Button
             variant="outlined"
-            startIcon={<ShoppingCartRounded style={{ fontSize: "18px" }} />}
+            startIcon={<ShoppingCartRounded style={ mobileScreen ? { fontSize: "22px" } : { fontSize: "18px" }} />}
             className="addToCartButton"
             onClick={addItemHandler}
           >
