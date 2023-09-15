@@ -53,6 +53,7 @@ const CartFooter = (props) => {
           className="cartSubmitButton orderButton"
           onClick={submitHandler}
           type="submit"
+          disabled={props.disabled}
         >
           {props.submit}
         </Button>

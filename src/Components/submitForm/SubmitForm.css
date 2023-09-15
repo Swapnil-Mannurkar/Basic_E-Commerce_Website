@@ -51,6 +51,13 @@
   width: 45%;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
 @media screen and (max-width: 480px) {
   .shippingForm {
     padding: 0 40px;

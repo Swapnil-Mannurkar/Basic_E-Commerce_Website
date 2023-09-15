@@ -56,7 +56,6 @@ const cartDataSlice = createSlice({
       );
       state.cartItemCount--;
 
-      console.log(removeItem.quantity);
       if (removeItem.quantity === 1) {
         state.cartData = state.cartData.filter(
           (item) => item.id !== removeItem.id
