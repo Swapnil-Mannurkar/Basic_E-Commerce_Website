@@ -34,7 +34,7 @@ const Products = () => {
         </Grid>
         <Grid xs >
           <div className="productFilter">
-            <label>Sort by:&nbsp;</label>
+            <label style={{color: "white"}}>Sort by:&nbsp;</label>
             <select
               value={sortMethod}
               onChange={(e) => sortProducts(e.target.value)}
