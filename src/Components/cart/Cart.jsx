@@ -1,25 +1,18 @@
 import "./Cart.css";
 import CartItemCard from "./CartItemCard";
-import CartHeader from "../ui/Header";
-import CartFooter from "../ui/Footer";
+import Header from "../ui/Header";
+import Footer from "../ui/Footer";
 import ProductionQuantityLimitsIcon from "@mui/icons-material/ProductionQuantityLimits";
-import { useDispatch, useSelector } from "react-redux";
-import { cartDataActions } from "../../store/cartData";
+import { useSelector } from "react-redux";
+import Modal from "../ui/Modal";
 
 const Cart = () => {
-  const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cartData.cartData);
-
-  const cartToggleHandler = () => {
-    dispatch(cartDataActions.toggleIsCartOpen("false"));
-    dispatch(cartDataActions.toggleIsSubmitFormOpen("false"));
-  };
 
   return (
     <>
-      <div className="cartModal" onClick={cartToggleHandler}></div>
-      <div className="cartContainer">
-        <CartHeader title={"Shopping Cart"} type="cart" />
+      <Modal>
+        <Header title={"Shopping Cart"} type="cart" />
         <div className="cartItemsContainer">
           {cartItems.map((item, index) => (
             <CartItemCard
@@ -46,9 +39,9 @@ const Cart = () => {
           </div>
         )}
         {cartItems.length > 0 && (
-          <CartFooter type="cart" submit={"ORDER"} cancel={"CANCEL"} />
+          <Footer type="cart" submit={"ORDER"} cancel={"CANCEL"} />
         )}
-      </div>
+      </Modal>
     </>
   );
 };

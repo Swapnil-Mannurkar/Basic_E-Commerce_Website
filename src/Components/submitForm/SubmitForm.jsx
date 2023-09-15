@@ -1,23 +1,14 @@
 import React from "react";
-import CartHeader from "../ui/Header";
-import CartFooter from "../ui/Footer";
+import Header from "../ui/Header";
+import Footer from "../ui/Footer";
 import "./SubmitForm.css";
-import { cartDataActions } from "../../store/cartData";
-import { useDispatch } from "react-redux";
+import Modal from "../ui/Modal";
 
 const SubmitForm = () => {
-  const dispatch = useDispatch();
-
-  const cartToggleHandler = () => {
-    dispatch(cartDataActions.toggleIsCartOpen("false"));
-    dispatch(cartDataActions.toggleIsSubmitFormOpen("false"));
-  };
-
   return (
-    <div>
-      <div className="cartModal" onClick={cartToggleHandler}></div>
-      <div className="cartContainer">
-        <CartHeader title={"Shipping Details"} />
+    <>
+      <Modal>
+        <Header title={"Shipping Details"} />
         <form className="shippingForm">
           <div className="contactDetails">
             <label>Name:</label>
@@ -46,9 +37,9 @@ const SubmitForm = () => {
             </div>
           </div>
         </form>
-        <CartFooter type="submitForm" submit={"CONFIRM"} cancel={"BACK"} />
-      </div>
-    </div>
+        <Footer type="submitForm" submit={"CONFIRM"} cancel={"BACK"} />
+      </Modal>
+    </>
   );
 };
 
