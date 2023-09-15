@@ -89,6 +89,14 @@
     width: 240px;
     height: 240px;
   }
+
+  .cardPrice {
+    font-size: 1.2rem;
+  }
+
+  .mrp {
+    font-size: 0.8rem;
+  }
 }
 
 @media screen and (max-width: 480px) {
