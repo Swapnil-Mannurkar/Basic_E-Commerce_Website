@@ -27,7 +27,7 @@ const Button = (props) => {
   };
 
   const googleButton = (
-    <button style={buttonStyle} className="loginButton" onClick={loginHandler}>
+    <button style={buttonStyle} className="loginButton blinkButton" onClick={loginHandler}>
       <img src={googleIcon} alt="loginIcon" />
       <span>&nbsp;&nbsp;</span>
       {props.text}

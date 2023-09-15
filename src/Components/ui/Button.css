@@ -7,11 +7,24 @@
   align-items: center;
 }
 
+.blinkButton {
+  animation: blinker ease 1.5s infinite;
+}
+
+@keyframes blinker {
+  0% {
+    box-shadow: 2px 2px 2px 1px transparent;
+  }
+  100% {
+    box-shadow: 2px 2px 2px 1px red;
+  }
+}
+
 .loginButton:hover {
   cursor: pointer;
 }
 
-@media screen and (max-width:960px) {
+@media screen and (max-width: 960px) {
   .loginButton {
     margin-right: 0px;
   }
