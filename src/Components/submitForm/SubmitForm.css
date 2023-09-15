@@ -50,3 +50,9 @@
   flex-direction: column;
   width: 45%;
 }
+
+@media screen and (max-width: 480px) {
+  .shippingForm {
+    padding: 0 40px;
+  }
+}
