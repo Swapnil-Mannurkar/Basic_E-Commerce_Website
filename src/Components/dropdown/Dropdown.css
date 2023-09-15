@@ -1,0 +1,83 @@
+.modal-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: -40px;
+}
+
+.modal-content {
+  position: absolute;
+  width: 14vw;
+  height: 38vh;
+  top: 9%;
+  right: 3%;
+  background: #fff;
+  color: #000;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-height: 80vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 999;
+  border: 2px solid black;
+}
+
+.modal-list {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: Montserrat;
+  font-size: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-list a {
+  color: #ffffff;
+}
+
+.logoutButton {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  height: 35px;
+  font-size: 14px;
+}
+
+.logoutButton:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 960px) {
+  .modal-container {
+    margin: 0;
+  }
+
+  .modal-content {
+    width: 45%;
+    top: 10%;
+  }
+
+  .modal-list {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1280px) and (min-width: 961px) {
+  .modal-content {
+    width: 20vw;
+    height: 40vh;
+    right: 8%;
+    top: 10%;
+  }
+}
