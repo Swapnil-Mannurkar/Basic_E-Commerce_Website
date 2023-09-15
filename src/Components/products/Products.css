@@ -23,14 +23,22 @@
 .productFilter {
   height: 100%;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   display: flex;
   align-items: center;
 }
 
 .sortOptions {
-  border: none;
-  background-color: #e0e0e0;
+  background-color: transparent;
+  padding: 5px;
+  color: white;
+  border-color: #fff;
+  font-size: 1rem;
+}
+
+.sortOptions option {
+  color: #131921;
+  font-size: 1rem;
 }
 
 @media screen and (max-width: 400px) {

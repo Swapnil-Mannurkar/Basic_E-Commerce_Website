@@ -29,10 +29,10 @@ const Products = () => {
     <div className="productsContainer">
       <Grid container className="productTitleContainer">
         {laptopScreen && <Grid xs></Grid>}
-        <Grid xs={padScreen ? 8 : 6} className="productTitleMainContainer">
+        <Grid xs={padScreen ? 8 : 5.5} className="productTitleMainContainer">
           <h1 className="productsTitle">PRODUCTS</h1>
         </Grid>
-        <Grid xs>
+        <Grid xs >
           <div className="productFilter">
             <label>Sort by:&nbsp;</label>
             <select
